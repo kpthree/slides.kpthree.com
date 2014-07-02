@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>The future of web!</title>
+
+        <meta name="description" content="The know how of web components">
+        <meta name="author" content="Kunal Parekh">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="css/reveal.min.css">
+        <link rel="stylesheet" href="css/theme/night.css" id="theme">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+        <script>
+            if( window.location.search.match( /print-pdf/gi ) ) {
+                var link = document.createElement( 'link' );
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = 'css/print/pdf.css';
+                document.getElementsByTagName( 'head' )[0].appendChild( link );
+            }
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section>
+                    <h1>The future of web!</h1>
+                    <h3>Object Oriented Html - WebComponents!</h3>
+                    <p>
+                        <small>Created by <a href="http://kpthree.com">Kunal Parekh</a> / <a href="http://twitter.com/kunalparekh1987">@kunalparekh1987</a></small>
+                    </p>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>HTML elements</h1>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2> Elements are <i>encapsulated</i></h2>
+                    </section>
+                    <section>
+                        <h2>Simple select box</h2>
+                        <select>
+                            <option>Sokrati</option>
+                            <option>TBSL</option>
+                            <option>Getit</option>
+                        </select>
+                        <section data-markdown>
+                            <script type="text/template">
+                                ``` html
+                                <select>
+                                    <option>Sokrati</option>
+                                    <option>TBSL</option>
+                                    <option>Getit</option>
+                                </select>
+                                ```
+                            </script>
+                        </section>
+                    </section>
+                </section>
+                
+                <section>
+                    <section>
+                        <h2> Elements are <i>configurable</i></h2>
+                    </section>
+                    <section>
+                        <h3>Simple select box</h3>
+                        <p>
+                            <select>
+                                <option>Sokrati</option>
+                                <option disabled>TBSL</option>
+                                <option selected>Getit</option>
+                            </select>
+                        </p>
+                        <section data-markdown>
+                            <script type="text/template">
+                                ``` html
+                                <select>
+                                    <option>Sokrati</option>
+                                    <option disabled>TBSL</option>
+                                    <option selected>Getit</option>
+                                </select>
+                                ```
+                            </script>
+                        </section>
+                    </section>
+                </section>
+                
+                <section>
+                    <section>
+                        <h2> Elements are <i>composable</i></h2>
+                    </section>
+                    <section>
+                        <h2>Grouping in select box</h2>
+                            <select>
+                                <optgroup label="Active agencies">
+                                    <option>Sokrati</option>
+                                    <option selected>Getit</option>
+                                </optgroup>
+                                <optgroup label="In-active agencies">
+                                    <option disabled>TBSL</option>
+                                </optgroup>
+                            </select>
+                        <section data-markdown>
+                            <script type="text/template">
+                                ``` html
+                                <select>
+                                    <optgroup label="Active agencies">
+                                        <option>Sokrati</option>
+                                        <option disabled>TBSL</option>
+                                        <option selected>Getit</option>
+                                    </optgroup>
+                                    <optgroup label="In-active agencies">
+                                        <option disabled>TBSL</option>
+                                    </optgroup>
+                                </select>
+                                ```
+                            </script>
+                        </section>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2> Elements are <i>programmable</i></h2>
+                    </section>
+                    <section>
+                        <section data-markdown>
+                            <script type="text/template">
+                                ``` javascript
+                                var select = document.getElementByTags("select");
+                                var selectedIndex = select.selectedIndex;
+                                ```
+                            </script>
+                        </section>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>Web demands Rich UIs</h1>
+                    </section>
+                    <section>
+                        <img src="images/ui_tabs.png" />
+                    </section>
+                    <section>
+                        <h2>Tab component code</h2>
+                        <img src="images/ui_tab_code.png" />
+                    </section>
+                    <section>
+                        <h2>Tab component code</h2>
+                        <img src="images/ui_tabs_code.png" />
+                    </section>
+                    <section>
+                        <h3>We copy/paste someone elses code</h3>
+                        <code>$("something").doSomething();</code>
+                        <p>Plain old typical jQuery code</p>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>Current html structure</h1>
+                        <img src="images/html.png" />
+                    </section>
+                    <section>
+                        <h2>There's nothing modern about &lt;div&gt;
+                        <h3>And yet,…this is how we build web apps.</h3>
+                        <p>It's sad. Shouldn't we demand more from web?</p>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>Can we do better?</h1>
+                        <img class="fragment" src="images/ce_tabs.png" />
+                    </section>
+                    <section>
+                        <q>It's easy to write code a <b>browser</b> understands.<br> Good developers write code <b>people</b> can understand.</q>
+                    </section>
+                </section>
+
+                <section>
+                    <h1>Introducing <br>Web Components!</h1>
+                    <p class="fragment">
+                        A set of emerging standards that allow developers to
+                        <b class="fragment">extend HTML</b>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>It is comprised of four parts:</h2>
+                    <ol>
+                        <li>Shadow DOM</li>
+                        <li>Templates</li>
+                        <li>Custom Elements</li>
+                        <li>Packaging (HTML imports)</li>
+                    </ol>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>1. Shadow DOM & 2. Templates</h2>
+                        <ul>
+                            <li>Shadow DOM addresses the DOM tree encapsulation problem</li>
+                            <li>With Shadow DOM, elements can get a new kind of node associated with them known as <b>Shadow Root</b></li>
+                            <li>Hide Presentation Details using templates</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img src="images/sd_composition1.png" />
+                    </section>
+                    <section data-markdown>
+                        ## 1. Shadow DOM
+                        <script type="text/template">
+                            ``` javascript
+                            var shadow = document.querySelector('#nameTag').createShadowRoot();
+                            var template = document.querySelector('#nameTagTemplate');
+                            shadow.appendChild(template.content);
+                            ```
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        ## 2. Template
+                        <script type="text/template">
+                            ``` html
+                            <template id="nameTagTemplate">
+                                <style>
+                                    .outer {
+                                        border: 2px solid;
+                                        ...
+                                    }
+                                </style>
+                                <article class="user spinner">
+                                    <dl class="user-data" hidden>
+                                      <dd class="user-name"></dd>
+                                        ...
+                                      <dt>Account:</dt>
+                                    </dl>
+                                        ...
+                                      <dt>Followers</dt>
+                                      <a class="user-followers-url">
+                                    </dl>
+                                </article>
+                            </template>
+                            ```
+                        </script>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>3. Custom Elements</h2>
+                        <ul>
+                            <li class="fragment">Allows web developers to define new types of HTML elements</li>
+                            <li class="fragment">Defines new HTML/DOM elements</li>
+                            <li class="fragment">Create elements that extend from other elements</li>
+                            <li class="fragment">Logically bundle together custom functionality into a single tag</li>
+                            <li class="fragment">Extends the API of existing DOM elements</li>
+                        </ul>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Registering new element
+                            ``` javascript
+                                var XFoo = document.registerElement('x-foo');
+                                document.body.appendChild(new XFoo());
+                            ```
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Extending native elements
+                            ``` javascript
+                                var MegaButton = document.registerElement('mega-button', {
+                                  prototype: Object.create(HTMLButtonElement.prototype),
+                                  extends: 'button'
+                                });
+                            ```
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Using custom elements
+                            ``` html
+                                <body>
+                                    <x-foo></x-foo>
+                                    <button is="mega-button" />
+                                </body>
+                            ```
+                        </script>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>4. Packaging (HTML imports)</h2>
+                        <ul>
+                            <li class="fragment">A way to include HTML documents in other HTML documents</li>
+                        </ul>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                        ``` html
+                            <head>
+                                <meta charset="UTF-8">
+                                <link rel="import" href="/github-card/webcomponent/github-card.html">
+                            </head>
+                        ```
+                        </script>
+                    </section>
+                    <section>
+                        <h2>Importing a file in html is like importing a jar in java</h2>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Any tool/lib available:</h2>
+                        <ul>
+                            <li>Bosonic</li>
+                            <li>Polymer</li>
+                            <li>Polymer.Dart</li>
+                            <li>X-TAG</li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>Browser support</h2>
+                        <img src="images/browser_support.png" />
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>Demo</h1>
+                    </section>
+                </section>
+                <section>
+                    <h1>Questions?</h1>
+                    <p>Lets start creating a better web!</p>
+                </section>
+            </div>
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script>
+
+        <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Parallax scrolling
+                // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+                // parallaxBackgroundSize: '2100px 900px',
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+/*                    { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } },
+*/                    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+
+        </script>
+
+    </body>
+</html>
